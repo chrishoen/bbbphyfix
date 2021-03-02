@@ -27,6 +27,10 @@ if [[ $(phyreg test 18 13) == "1" ]]; then
 	  do echo waiting to reboot
 	  sleep 10
 	done
+else
+	NOW=$(date +%s)
+	NOW=$(date)
+	echo "chkphy:PASS $NOW"
+	echo "chkphy:PASS $NOW" >>/var/tmp/chkphy.log
 fi
 
-echo "chkphy:eth0 good"
